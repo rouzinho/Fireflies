@@ -1,0 +1,35 @@
+int sensorPin = A0;    // select the input pin for the potentiometer
+int ledPin = 13;      // select the pin for the LED
+int sensorValue = 0;  // variable to store the value coming from the sensor
+int l1 = 13;	//pins sur lesquels sont branchées les lucioles.
+int l2 = 12;
+int l3 = 11;
+int l4 = 10;
+int l5 = 9;
+int l6 = 8;
+int l7 = 7;
+
+void setup() {
+  // declare the ledPin as an OUTPUT:         
+	pinMode(l1, OUTPUT);
+	pinMode(l2, OUTPUT);
+	pinMode(l3, OUTPUT);
+	pinMode(l4, OUTPUT);
+	pinMode(l5, OUTPUT);
+	pinMode(l6, OUTPUT);
+	pinMode(l7, OUTPUT);
+}
+
+void loop() {
+  // read the value from the sensor:
+  sensorValue = analogRead(sensorPin);    
+  digitalWrite(l1, HIGH);
+  digitalWrite(l2, HIGH);
+  digitalWrite(l3, HIGH);
+  digitalWrite(l4, HIGH);
+  digitalWrite(l5, HIGH);
+  digitalWrite(l6, HIGH);
+  digitalWrite(l7, HIGH);
+  // turn the ledPin on
+  Serial.println(sensorValue);
+}
